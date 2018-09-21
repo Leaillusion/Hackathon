@@ -143,7 +143,7 @@
 
         <Button
             android:id="@+id/button"
-            android:background="#F4FF81"
+            android:background="@drawable/button_rectangle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="200dp"
