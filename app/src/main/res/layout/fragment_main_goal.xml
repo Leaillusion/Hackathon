@@ -8,38 +8,30 @@
     tools:context=".FragmentMainGoal">
 
     <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/photo_target"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintDimensionRatio="w,1:1"
+            android:layout_height="450dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
+
         <ProgressBar
             android:id="@+id/pb_horizontal"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="20dp"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginBottom="32dp"
             android:layout_marginTop="24dp"
             android:max="100"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
             app:layout_constraintEnd_toEndOf="@+id/photo_target"
             app:layout_constraintStart_toStartOf="@+id/photo_target"
             app:layout_constraintTop_toBottomOf="@+id/photo_target" />
@@ -48,19 +40,17 @@
             android:id="@+id/editText"
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="76dp"
             android:ems="10"
             android:gravity="center"
             android:hint="0.50"
             android:inputType="number"
             android:textSize="16dp"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/pb_horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/pb_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_target"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -72,6 +62,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="32dp"
+            android:gravity="center"
             android:text="руб"
             android:textSize="16dp"
             app:layout_constraintEnd_toStartOf="@+id/name_target"
@@ -82,17 +73,19 @@
             android:id="@+id/name_target"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:ems="10"
             android:gravity="center"
-            android:hint="PlayStation"
+            android:hint="Шоколад"
             android:inputType="text"
             android:textSize="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/pb_horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/button_new_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/pb_horizontal"
             tools:ignore="MissingConstraints" />
@@ -101,17 +94,35 @@
             android:id="@+id/button_new_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="200dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginRight="200dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/button_rectangle"
             android:text="Ok"
             android:textColor="#57585b"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_target" />
+            app:layout_constraintTop_toBottomOf="@+id/name_target"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="420dp"
+            android:src="@drawable/edit"
+            app:backgroundTint="@color/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="@+id/photo_target"
+            app:layout_constraintTop_toTopOf="@+id/photo_target"
+            tools:ignore="MissingConstraints" />
 
     </android.support.constraint.ConstraintLayout>
 

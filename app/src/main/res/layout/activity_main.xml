@@ -7,43 +7,26 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/title_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Новая цель"
-            android:textSize="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/photo_target"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <ImageView
             android:id="@+id/photo_target"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="450dp"
+            android:layout_height="450dp"
             android:layout_marginBottom="16dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="24dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/camera"
             app:layout_constraintDimensionRatio="w,1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_tv"
             tools:src="@tools:sample/avatars" />
 
         <ImageButton
@@ -143,16 +126,18 @@
 
         <Button
             android:id="@+id/button"
-            android:background="@drawable/button_rectangle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_marginEnd="200dp"
             android:layout_marginLeft="200dp"
             android:layout_marginRight="200dp"
             android:layout_marginStart="200dp"
             android:layout_marginTop="8dp"
-            android:textColor="#57585b"
+            android:background="@drawable/button_rectangle"
             android:text="Ok"
+            android:textColor="#57585b"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
