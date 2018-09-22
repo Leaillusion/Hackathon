@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/photo_target"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="24dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/camera"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageButton
+            android:id="@+id/camera"
+            android:background="@drawable/button_circle"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_target"
+            app:srcCompat="@drawable/camera" />
+
+        <ImageButton
+            android:id="@+id/gallery"
+            android:background="@drawable/button_circle"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/browser"
+            app:layout_constraintStart_toEndOf="@+id/camera"
+            app:layout_constraintTop_toBottomOf="@+id/photo_target"
+            app:srcCompat="@drawable/gallery" />
+
+        <ImageButton
+            android:id="@+id/browser"
+            android:background="@drawable/button_circle"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_target"
+            app:srcCompat="@drawable/browser" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="1000"
+            android:inputType="number"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/name_target"
+            app:layout_constraintStart_toStartOf="@+id/name_target"
+            app:layout_constraintTop_toBottomOf="@+id/name_target"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="руб"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toEndOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/name_target"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/name_target"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="PlayStation"
+            android:inputType="text"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gallery"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_money1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0.50"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_coast1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_coast1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="руб"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_target1"
+            app:layout_constraintStart_toEndOf="@+id/et_money1"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_target1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Шоколад"
+            android:inputType="text"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_coast1"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/ib_delete1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintStart_toEndOf="@+id/et_target1"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:srcCompat="@drawable/delete" />
+
+        <EditText
+            android:id="@+id/et_money2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0.50"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_coast2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_money1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_coast2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="руб"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_target2"
+            app:layout_constraintStart_toEndOf="@+id/et_money2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_coast1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_target2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Шоколад"
+            android:inputType="text"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_coast2"
+            app:layout_constraintTop_toBottomOf="@+id/et_target1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/ib_delete2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/et_target2"
+            app:layout_constraintTop_toBottomOf="@+id/ib_delete1"
+            app:srcCompat="@drawable/delete" />
+
+
+        <EditText
+            android:id="@+id/et_money3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0.50"
+            android:inputType="number"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_coast3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_money2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_coast3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="руб"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_target3"
+            app:layout_constraintStart_toEndOf="@+id/et_money3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_coast2"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_target3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Шоколад"
+            android:inputType="text"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_coast3"
+            app:layout_constraintTop_toBottomOf="@+id/et_target2"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/ib_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintEnd_toEndOf="@+id/ib_delete3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/ib_delete3"
+            app:layout_constraintTop_toBottomOf="@+id/ib_delete3"
+            app:srcCompat="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/ib_delete3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintStart_toEndOf="@+id/et_target3"
+            app:layout_constraintTop_toBottomOf="@+id/ib_delete2"
+            app:srcCompat="@drawable/delete" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_rectangle"
+            android:text="Ok"
+            android:textColor="#57585b"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_target3"
+            tools:ignore="MissingConstraints" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
